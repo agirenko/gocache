@@ -1,2 +1,2 @@
 # gocache
-GoLang cache excercise
+GoLang cache excercise with ChatGPT tests generating experience.
