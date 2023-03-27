@@ -1,4 +1,4 @@
-package gocache
+package cache
 
 type Cc struct {
 	cMap map[string]interface{}

@@ -1,19 +1,19 @@
-package gocache_test
+package cache_test
 
 import (
-	"github.com/agirenko/gocache"
+	"github.com/agirenko/gocache/cache"
 	"testing"
 )
 
 // ChatGPT generated tests
 func TestCc_SetAndGet(t *testing.T) {
-	cache := gocache.New()
+	mycache := cache.New()
 
 	// Set a key-value pair
-	cache.Set("key", "value")
+	mycache.Set("key", "value")
 
 	// Get the value of the key
-	value := cache.Get("key")
+	value := mycache.Get("key")
 
 	// Check if the value is the expected value
 	if value != "value" {
@@ -22,13 +22,13 @@ func TestCc_SetAndGet(t *testing.T) {
 }
 
 func TestCc_Delete(t *testing.T) {
-	cache := gocache.New()
+	mycache := cache.New()
 
 	// Set a key-value pair
-	cache.Set("key", "value")
+	mycache.Set("key", "value")
 
 	// Delete the key
-	deleted := cache.Delete("key")
+	deleted := mycache.Delete("key")
 
 	// Check if the key was deleted
 	if !deleted {
@@ -36,7 +36,7 @@ func TestCc_Delete(t *testing.T) {
 	}
 
 	// Try to get the value of the deleted key
-	value := cache.Get("key")
+	value := mycache.Get("key")
 
 	// Check if the value is nil
 	if value != nil {
@@ -44,7 +44,7 @@ func TestCc_Delete(t *testing.T) {
 	}
 
 	// Try to delete the key again
-	deleted = cache.Delete("key")
+	deleted = mycache.Delete("key")
 
 	// Check if the key was not deleted again
 	if deleted {
