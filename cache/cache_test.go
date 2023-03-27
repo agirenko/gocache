@@ -1,8 +1,9 @@
 package cache_test
 
 import (
-	"github.com/agirenko/gocache/cache"
 	"testing"
+
+	"github.com/agirenko/gocache/cache"
 )
 
 // ChatGPT generated tests
